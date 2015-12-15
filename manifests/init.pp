@@ -36,6 +36,7 @@ class neo4j (
   #server options
   $allow_remote_connections = true,
   $address = $::ipaddress,
+  $data_dir = undef,
   $jvm_init_memory = '1024',
   $jvm_max_memory = '1024',
 

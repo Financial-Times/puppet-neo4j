@@ -8,7 +8,11 @@
 #***************************************************************
 
 # location of the database directory
+<% if @data_dir -%>
+org.neo4j.server.database.location=<%= @data_dir -%>/graph.db
+<% else -%>
 org.neo4j.server.database.location=<%= @install_prefix -%>/data/graph.db
+<% end -%>
 
 # Let the webserver only listen on the specified IP. Default is localhost (only
 # accept local connections). Uncomment to allow any connection. Please see the
